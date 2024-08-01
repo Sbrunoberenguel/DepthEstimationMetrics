@@ -14,20 +14,20 @@ Absolute metrics refer to those where we directly compare the difference between
 ### MAE: Mean Absolute Error
 We compute the absolute difference between the network prediction and the ground truth for each image and average over the number of pixels in the image.
 
-$MAE$ = $ \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w}|pred_{ij} - gt_{ij}| $
+$$MAE =  \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w}|pred_{ij} - gt_{ij}| $$
 
 
 ### MSE: Mean Square Error
 We compute the squared difference between the network prediction and the ground truth for each image and average over the number of pixels in the image.
 
-$MSE $ = $ \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (pred_{ij} - gt_{ij})^2 $ 
+$$MSE  =  \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (pred_{ij} - gt_{ij})^2 $$
 
 ### RMSE: Root Mean Square Error
 We compute the root of [the square difference between the network prediction and the ground truth for each image, averaged over the number of pixels in the image]. We preset this evaluation metric with linear ($RMSE$) and logarithmic ($RMSE_{LOG}$) values of the prediction and ground truth.
 
-$RMSE $ = $ \sqrt{\dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (pred_{ij} - gt_{ij})^2 }$ 
+$$RMSE  =  \sqrt{\dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (pred_{ij} - gt_{ij})^2 }$$
 
-$RMSE_{LOG}$ = $ \sqrt{\dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (\log pred_{ij} - \log gt_{ij})^2 }$ 
+$$RMSE_{LOG} = \sqrt{\dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w} (\log pred_{ij} - \log gt_{ij})^2 }$$
 
 ## Relative metrics
 
@@ -36,12 +36,12 @@ Relative metrics refer to those where the error is averaged with respect the gro
 ### MARE: Mean Absolute Relative Error
 We compute the absolute difference betweeen prediction and ground truth divided by the ground truth value and averaged over all the pixels in the image.
 
-$MARE $ = $ \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w}\dfrac{|pred_{ij} - gt_{ij}|}{gt_{ij}} $
+$$MARE = \dfrac{1}{h\cdot w}\sum_{j}^{h}\sum_{i}^{w}\dfrac{|pred_{ij} - gt_{ij}|}{gt_{ij}} $$
 
 ### $\delta^n$: Delta inlier ratio
 We compute the ratio of pixels that are within a threshold and average it over all the image pixels.
 
-$\delta^n$ = $ \dfrac{1}{h\cdot w} \left( \max \left( \dfrac{pred}{gt}, \dfrac{gt}{pred} \right) \right) < 1.25^n), n=1,2,3 $
+$$\delta^n =  \dfrac{1}{h\cdot w} \left( \max \left( \dfrac{pred}{gt}, \dfrac{gt}{pred} \right) \right) < 1.25^n), n=1,2,3 $$
 
 
 ## Citation
